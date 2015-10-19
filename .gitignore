@@ -1,0 +1,15 @@
+example/obj
+example/bin/*
+!example/bin/data
+!example/bin/data/*
+!examplebin/data/**/*
+.cproject
+.project
+.settings
+*.qbs
+Makefile
+*.make
+*.xcodeproj
+*.plist
+*.sln
+*.vcproj
