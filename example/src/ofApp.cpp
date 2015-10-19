@@ -18,7 +18,7 @@ const std::string text = "Lorem ipsum dolor sit amet, consectetur adipiscing eli
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-	ttf.setup(OF_TTF_SANS, 14);
+	ttf.load(OF_TTF_SANS, 14);
 }
 
 //--------------------------------------------------------------

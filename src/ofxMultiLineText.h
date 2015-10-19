@@ -9,17 +9,15 @@
 #include "ofConstants.h"
 #include "ofTrueTypeFont.h"
 
-class ofxMultiLineText {
+class ofxMultiLineText: public ofTrueTypeFont {
 public:
 	enum Adjustment{
 		Left,
 		Center
 	};
 
-
-	void setup(std::string path, int fontSize);
+	using ofTrueTypeFont::drawString;
+	using ofTrueTypeFont::getStringBoundingBox;
 	void drawString(std::string text, float x, float y, Adjustment adjust);
-	ofRectangle getBoundingBox(std::string tex, float x, float y, Adjustment adjust);
-private:
-	ofTrueTypeFont ttf;
+	ofRectangle getStringBoundingBox(std::string tex, float x, float y, Adjustment adjust);
 };
