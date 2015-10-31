@@ -32,7 +32,7 @@ void ofxMultiLineText::drawString(std::string text, float x, float y, Adjustment
 ofRectangle ofxMultiLineText::getStringBoundingBox(std::string text, float x, float y, Adjustment adjust){
 	switch(adjust){
 		case Left:
-			return getStringBoundingBox(text,x,y,adjust);
+			return getStringBoundingBox(text,x,y);
 			break;
 		case Center:{
 			ofRectangle bb;
@@ -46,6 +46,7 @@ ofRectangle ofxMultiLineText::getStringBoundingBox(std::string text, float x, fl
 				bb = bb.getUnion(thisbb);
 				yp += getLineHeight();
 			}
+			bb.x += bb.width/2.f;
 			return bb;
 			break;
 		}
